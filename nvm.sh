@@ -119,9 +119,6 @@ print_versions()
     local PADDED_VERSION=''
     for VERSION in $1; do
         PADDED_VERSION=`printf '%10s' $VERSION`
-        if [[ -d "$NVM_DIR/$VERSION" ]]; then
-             PADDED_VERSION="\033[0;34m$PADDED_VERSION\033[0m"
-        fi
         OUTPUT="$OUTPUT\n$PADDED_VERSION"
     done
     echo -e "$OUTPUT" | column
